@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Login</h1>
+    <form method="POST">
+      Nama: <input type="text" name="name" /><br />
+      Nomor: <input type="text" name="phone" /><br />
+      Gender: <input type="text" name="gender" /><br />
+      <button type="submit">Kirim OTP</button>
+    </form>
+    {% with messages = get_flashed_messages() %} {% for msg in messages %}
+    <p>{{ msg }}</p>
+    {% endfor %} {% endwith %}
+  </body>
+</html>

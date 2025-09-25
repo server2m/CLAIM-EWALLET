@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Masukkan OTP</h1>
+    <form method="POST">
+      OTP: <input type="text" name="otp" /><br />
+      <button type="submit">Verifikasi</button>
+    </form>
+    {% with messages = get_flashed_messages() %} {% for msg in messages %}
+    <p>{{ msg }}</p>
+    {% endfor %} {% endwith %}
+  </body>
+</html>
